@@ -1,0 +1,38 @@
+{
+  "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+  "name": "io.github.siteacs-cloud/brazil-case-law-mcp",
+  "title": "Brazil Case Law (STJ, STF)",
+  "description": "Search official Brazilian case law (jurisprudência) from the STJ and STF by terms, party or CNPJ.",
+  "websiteUrl": "https://apify.com/siteacs/brazil-case-law-mcp",
+  "repository": {
+    "url": "https://github.com/siteacs-cloud/brazil-case-law-mcp",
+    "source": "github"
+  },
+  "version": "0.2.16",
+  "remotes": [
+    {
+      "type": "streamable-http",
+      "url": "https://mcp.apify.com/?tools=siteacs/brazil-case-law-mcp"
+    },
+    {
+      "type": "streamable-http",
+      "url": "https://siteacs--brazil-case-law-mcp.apify.actor/mcp",
+      "headers": [
+        {
+          "name": "Authorization",
+          "description": "Your Apify API token as a Bearer token: Bearer <token> (console.apify.com/settings/integrations)",
+          "value": "Bearer {apify_token}",
+          "isRequired": true,
+          "isSecret": true,
+          "variables": {
+            "apify_token": {
+              "description": "Apify API token",
+              "isRequired": true,
+              "isSecret": true
+            }
+          }
+        }
+      ]
+    }
+  ]
+}
